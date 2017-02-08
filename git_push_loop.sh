@@ -4,7 +4,7 @@
 function LoopGitBranches {
   pwd
   for branch in $(git for-each-ref --format='%(refname)' refs/heads/); do
-    git log --oneline "$branch" ^origin/master
+    git status "$branch" ^origin/master
   done
 }
 
